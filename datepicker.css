@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ruslan+Display&display=swap');
+html body {
+    background-image: url;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+.tbl1 {
+	font-family: 'Ruslan Display', cursive;
+	font-size: 20px;
+  	width: 100%;
+	background: gray;
+	color: black;
+	border-top-right-radius:25px;
+	border-top-left-radius:25px;	
+}
+.month{
+	color:black;
+}
+#datepicker1, #datepicker2{
+	width:30%;
+}
+.center {
+	text-align: center;
+}
+.tbl2 {
+	font-family: 'Ruslan Display', cursive;
+	font-size: 30px;
+	font-weight: bold;
+	width: 100%;
+	background-color:  #e7d200;
+	color: blue;
+	table-layout: fixed;
+}
+.tbl3 {
+	font-family: 'Ruslan Display', cursive;
+	font-size: 30px;
+	font-weight: bold;
+	width: 100%;
+	color: red;
+	background-color: white;
+	border-bottom: 5px solid black;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+.gray{
+	text-align: center;
+	color: #e7d100;
+}
+.black {
+	text-align: center;
+	color: black;
+}
+.tbl1 td:hover{
+	color: white;
+	cursor: pointer;
+}
+.tbl2 td:hover{
+	color: black;
+	cursor: pointer;
+}
+.tbl3 td:hover{
+	color: white;
+	cursor: pointer;
+}
+.currentDay1{
+	color: white;
+	text-align: center;
+}
+h1{
+	font-family: 'Ruslan Display', cursive;
+	font-size: 30px;
+	margin-left: 20px;
+	color: grey;
+}
+.currentDay1{
+	color:white;
+}
+
