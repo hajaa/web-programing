@@ -1,0 +1,42 @@
+div{
+	
+	height: 150px;
+	width: 100px;
+	margin-top: 4px;
+	font-size: 40px;
+	font-style: Tahoma;
+	white-space: nowrap;
+	border-top: 1px
+	border-color:#687291;
+	display: inline-block;
+
+}
+}
+#A{
+	background-color:#f8f800; 
+    color:black;
+	
+}
+#B{
+	background-color:#eeeff2; 
+
+	
+}
+#C{
+	background-color: #eeeff2; 
+
+}
+#D{
+	background-color: #eeeff2; 
+
+	
+}
+#E{
+	background-color: #eeeff2; 
+
+}
+
+#F{
+	background-color: #687291; 
+}
+
