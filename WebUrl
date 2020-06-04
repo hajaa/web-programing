@@ -1,0 +1,75 @@
+package web;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+
+public class WebUrl {
+	
+	private static BufferedWriter writer;
+
+	public static void main(String args[]) throws IOException {
+		Boolean end = false;
+		for (char i = 'a'; i < 'z'; i++) {
+			if (end)
+				break;
+			for (char j = 'a'; j < 'z'; j++) {
+				if (end)
+					break;
+				for (char k = 'a'; k < 'z'; k++) {
+
+					if (i == 'w' && j == 's' && k == 'e') {
+						end = true;
+					} else {
+						System.out.println("https://ikon.mn/n/1" + i + j + k);
+						DownloadURL("https://ikon.mn/n/1" + i + j + k, i +""+ j +""+ k);
+					}
+					if (end)
+						break;
+				}
+			}
+		}
+	}
+	
+	public static void DownloadURL(String urlString, String name) throws IOException {
+		StandardCharsets.UTF_8.name();
+		URL url;
+		   url = new URL(urlString);
+		//   String ikon = "C:\\Users\\Acer\\eclipse-workspace\\web\\ikon";
+		   try {
+			   	 HttpURLConnection huc = (HttpURLConnection) url.openConnection();
+		    	 int responseCode = huc.getResponseCode();  	
+
+	        	 if (responseCode != 404) {
+		        	 System.out.println("Yes, Page downloaded. "+"C:\\Users\\Acer\\eclipse-workspace\\web\\ikon" + urlString);	
+	        	 
+			         BufferedReader reader =  new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8));         
+			    	 writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\Acer\\eclipse-workspace\\web\\ikon\\"+"1"+name + ".html",true),StandardCharsets.UTF_8));	
+			    	 //Files.copy(writer, Paths.get(name));
+			    	 String line;			         
+			        	 while ((line = reader.readLine()) != null) {	     
+				        	   writer.write(line);
+			         }  
+	        	 }	 
+	        	 else 
+	        		 System.out.println("Yes, Page downloaded. " + urlString + " ================= ");
+	        	 
+	} catch (MalformedURLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	  
+}
+	
+}
